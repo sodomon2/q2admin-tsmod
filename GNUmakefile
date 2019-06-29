@@ -32,7 +32,6 @@ OUTFILES = g_main.o zb_spawn.o zb_vote.o zb_ban.o zb_cmd.o zb_flood.o \
 
 game$(ARCH).so: $(OUTFILES)
 	$(CC) $(CFLAGS) $(OUTFILES) $(LDFLAGS) -o game$(ARCH).so
-	ldd -r $@
 
 zip: game$(ARCH).so
 	strip game$(ARCH).so
